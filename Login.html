@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- LOGIN FORM -->
+        <form id="login-form">
+            <h1>Login</h1>
+            <div class="input-item username_box">
+                <input type="text" id="login_e-mail" placeholder="Username">
+                <i><box-icon type='solid' name='user'></box-icon></i>
+            </div>
+            <div class="input-item password_box">
+                <input type="password" id="login_password" placeholder="Password" required>
+                <i><box-icon type='solid' name='lock'></box-icon></i>
+            </div>
+            <div class="forgote">
+                <label><input type="checkbox" id="check">Remember me</label>
+                <a href="reset.html">
+                    <p>Forgot Password?</p>
+                </a>
+            </div>
+            <button type="submit" class="btn"><span>Login</span></button>
+
+            <div class="register">
+                <p>Don't have an account? <span class="toggle-register">Register</span></p>
+            </div>
+        </form>
+
+
+        <!-- REGISTER FORM -->
+        <form id="register-form" style="display: none;">
+            <h1>Register</h1>
+            <div class="input-item username_box">
+                <input type="text" id="reg-username" placeholder="Create Username">
+                <i><box-icon type='solid' name='user'></box-icon></i>
+            </div>
+            <div class="input-item password_box">
+                <input type="password" id="reg-password" placeholder="Create Password" required>
+                <i><box-icon type='solid' name='lock'></box-icon></i>
+            </div>
+            <button type="submit" class="btn"><span>Register</span></button>
+
+            <div class="register">
+                <p>Already have an account? <span class="toggle-login">Login</span></p>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
