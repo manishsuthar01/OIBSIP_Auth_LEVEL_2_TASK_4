@@ -32,7 +32,6 @@ body {
   backdrop-filter: blur(14px);
   box-shadow: 2px 1px 1px rgb(0, 0, 0);
   position: absolute;
-  top: 200px;
 }
 
 .wrapper h1 {
