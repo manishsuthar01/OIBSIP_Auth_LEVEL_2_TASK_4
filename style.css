@@ -18,7 +18,7 @@ body {
 #string {
   transform: rotate(-90deg);
   position: absolute;
-  width: 500px;
+  width: 100%;
   top: 0;
 }
 .wrapper {
@@ -137,9 +137,13 @@ body {
 
 /* Responsive Styling */
 @media screen and (max-width: 480px) {
+  body{
+    align-items:start;
+  }
   .wrapper {
     width: 90%;
     padding: 30px 20px;
+    top: 80px;
   }
 
   .input-item input {
