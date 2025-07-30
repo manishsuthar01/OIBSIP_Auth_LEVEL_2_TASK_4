@@ -25,17 +25,6 @@ JavaScript (ES6)
 
 GSAP (GreenSock Animation Platform)
 
-✨ Use Case
-This is ideal for:
-
-Frontend authentication demos
-
-UI/UX showcase
-
-Portfolio projects
-
-Practicing form handling and responsive layout design
-
 📃 License
 Licensed under the MIT License.
 
