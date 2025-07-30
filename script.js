@@ -113,7 +113,7 @@ toggleLogin.addEventListener("click", (e) => {
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
   if (validateLoginForm()) {
-    window.location.href = "index.html"; // Redirect on success
+    window.location.href = "home.html"; // Redirect on success
   }
 });
 
