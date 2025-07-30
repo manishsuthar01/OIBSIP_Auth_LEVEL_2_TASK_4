@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -13,27 +13,34 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  position: relative;
 }
-
+#string {
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 400px;
+  top: 0;
+}
 .wrapper {
+  z-index: 999;
   padding: 40px 50px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
   width: 420px;
   background-color: transparent;
   background-position: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(14px);
   box-shadow: 2px 1px 1px rgb(0, 0, 0);
+  position: absolute;
 }
 
 .wrapper h1 {
   font-size: 2.5em;
-  background: linear-gradient(to right, rgb(142, 60, 60), rgb(11, 11, 167));
+  background: linear-gradient(to right, rgb(145, 16, 16), rgb(8, 8, 236));
   background-clip: text;
   color: transparent;
   text-align: center;
   font-weight: 900;
-  
 }
 
 .wrapper .input-item {
@@ -155,7 +162,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    gap:5px;
+    gap: 5px;
     font-size: 14px;
   }
 
