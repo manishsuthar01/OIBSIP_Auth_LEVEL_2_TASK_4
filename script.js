@@ -2,7 +2,7 @@ const loginForm = document.getElementById("login-form");
 const registerForm = document.getElementById("register-form");
 const toggleRegister = document.querySelector(".toggle-register");
 const toggleLogin = document.querySelector(".toggle-login");
-
+const wrapper = document.querySelector(".wrapper");
 // Registration
 function validateRegisterForm() {
   const username = document.getElementById("reg-username").value.trim();
@@ -71,19 +71,49 @@ toggleRegister.addEventListener("click", (e) => {
   e.preventDefault();
   loginForm.style.display = "none";
   registerForm.style.display = "block";
+  gsap.from(".wrapper", {
+    x: 100,
+    y: -200,
+    duration: 1,
+    stagger: 0.5,
+    ease: "back.out(1.7)",
+  });
+
+  gsap.from("svg path", {
+    attr: {
+      d: `M 10 100 Q 500 700 990 10`,
+    },
+    duration: 3,
+    ease: "elastic.out(1, 0.3)",
+  });
 });
 
 toggleLogin.addEventListener("click", (e) => {
   e.preventDefault();
   registerForm.style.display = "none";
   loginForm.style.display = "block";
+  gsap.from(".wrapper", {
+    x: 100,
+    y: -200,
+    duration: 1,
+    stagger: 0.5,
+    ease: "back.out(1.7)",
+  });
+
+  gsap.from("svg path", {
+    attr: {
+      d: `M 10 100 Q 500 700 990 10`,
+    },
+    duration: 3,
+    ease: "elastic.out(1, 0.3)",
+  });
 });
 
 // Submit login
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
   if (validateLoginForm()) {
-    window.location.href = "home.html"; // Redirect on success
+    window.location.href = "index.html"; // Redirect on success
   }
 });
 
@@ -98,3 +128,44 @@ registerForm.addEventListener("submit", function (e) {
 });
 
 // gsap
+gsap.from(".wrapper", {
+  x: 100,
+  y: -200,
+  duration: 1,
+  stagger: 0.5,
+  ease: "back.out(1.7)",
+});
+
+let string = document.querySelector("#string");
+let initialpath = `M 10 100 Q 500 100 990 100`;
+let finalpathpath = `M 10 100 Q 500 100 990 100`;
+let path = document.querySelector("path");
+
+string.addEventListener("mousemove", (dets) => {
+  finalpath = `M 10 100 Q ${dets.offsetX} ${dets.offsetY} 990 100`;
+  gsap.to("svg path", {
+    attr: {
+      d: finalpath,
+    },
+    duration: 0.3,
+    ease: "elastic.out(1, 0.3)",
+  });
+});
+
+string.addEventListener("mouseleave", () => {
+  gsap.to("svg path", {
+    attr: {
+      d: initialpath,
+    },
+    duration: 0.5,
+    ease: "elastic.out(1, 0.3)",
+  });
+});
+
+gsap.from("svg path", {
+  attr: {
+    d: `M 10 100 Q 500 700 990 10`,
+  },
+  duration: 3,
+  ease: "elastic.out(1, 0.3)",
+});
